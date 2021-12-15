@@ -13,10 +13,5 @@
 				<VALUE xsi:type="integer">0</VALUE>
 			</FORMULA>
 		</TESTSTEP>
-		<TESTSTEP format-rev="3" id="e425108d-3d81-461c-8e6a-9bb2f3bd38d0" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
-			<FORMULA format-rev="1" xsi:type="valueBaseExpression">
-				<VALUE xsi:type="integer">0</VALUE>
-			</FORMULA>
-		</TESTSTEP>
 	</TESTSTEPS>
 </PACKAGE>
