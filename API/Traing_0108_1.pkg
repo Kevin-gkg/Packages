@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PACKAGE format-rev="7" prog-version="2020.4.105605+9fffb455971e" xmlns="http://www.tracetronic.de/xml/ecu-test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tracetronic.de/xml/ecu-test package.xsd">
+	<INFORMATION format-rev="2" xsi:type="packageInfo">
+		<DESCRIPTION xsi:type="string"/>
+		<VERSION xsi:type="string"/>
+		<ALTERNATE-CALL-REPRESENTATION-ACTION-FIELD-TEMPLATE xsi:type="string"/>
+		<ALTERNATE-CALL-REPRESENTATION-EXPECTATION-FIELD-TEMPLATE xsi:type="string"/>
+	</INFORMATION>
+	<VARIABLES xsi:type="variableContainer">
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">A</NAME>
+			<DESCRIPTION xsi:type="string"/>
+			<DEFAULT-VALUE format-rev="1" xsi:type="value">
+				<DATA xsi:type="integer">0</DATA>
+				<TEXTDATA xsi:type="string">0</TEXTDATA>
+			</DEFAULT-VALUE>
+		</VARIABLE>
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">Name</NAME>
+			<DEFAULT-VALUE xsi:type="undefined"/>
+		</VARIABLE>
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">loopCounter</NAME>
+			<DEFAULT-VALUE format-rev="1" xsi:type="value">
+				<DATA xsi:type="integer">0</DATA>
+			</DEFAULT-VALUE>
+		</VARIABLE>
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">list</NAME>
+			<DESCRIPTION xsi:type="string"/>
+			<DEFAULT-VALUE xsi:type="pyObject">
+				<OBJECT xsi:type="string">[]</OBJECT>
+			</DEFAULT-VALUE>
+		</VARIABLE>
+	</VARIABLES>
+	<MAPPING format-rev="1" xsi:type="localMappingSpace"/>
+	<TESTSTEPS xsi:type="testCase">
+		<TESTSTEP id="23f6d0f3-28b1-4eca-aed8-6bee9226b348" name="TsLoop" xsi:type="utility-3da58cf0-4fef-11dc-be56-0013728784ee">
+			<TESTSTEP format-rev="3" id="12a1b10d-c77d-4af9-9d36-ed0300eb3aac" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">list</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">append</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT xsi:type="functionBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="binaryOpBaseExpression">
+									<NAME xsi:type="string">BINARY_SUBSCR</NAME>
+									<FIRST-COMPONENT xsi:type="functionBaseExpression">
+										<COMPONENT xsi:type="attributeBaseExpression">
+											<COMPONENT xsi:type="functionBaseExpression">
+												<COMPONENT xsi:type="attributeBaseExpression">
+													<COMPONENT xsi:type="attributeBaseExpression">
+														<COMPONENT xsi:type="varBaseExpression">
+															<NAME xsi:type="string">api</NAME>
+														</COMPONENT>
+														<ATTR-NAME xsi:type="string">DataBrowser</ATTR-NAME>
+													</COMPONENT>
+													<ATTR-NAME xsi:type="string">BrowseBus</ATTR-NAME>
+												</COMPONENT>
+												<ARGUMENTS>
+													<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+														<VALUE xsi:type="string">A-CAN</VALUE>
+													</ARGUMENT>
+												</ARGUMENTS>
+											</COMPONENT>
+											<ATTR-NAME xsi:type="string">ListFrames</ATTR-NAME>
+										</COMPONENT>
+									</FIRST-COMPONENT>
+									<SECOND-COMPONENT xsi:type="binaryOpBaseExpression">
+										<NAME xsi:type="string">BINARY_SUBTRACT</NAME>
+										<FIRST-COMPONENT xsi:type="varBaseExpression">
+											<NAME xsi:type="string">loopCounter</NAME>
+										</FIRST-COMPONENT>
+										<SECOND-COMPONENT format-rev="1" xsi:type="valueBaseExpression">
+											<VALUE xsi:type="integer">1</VALUE>
+										</SECOND-COMPONENT>
+									</SECOND-COMPONENT>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">GetName</ATTR-NAME>
+							</COMPONENT>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<VARIABLE-REFS>
+				<VARIABLE-NAME dkey="default">
+					<DVALUE xsi:type="string">loopCounter</DVALUE>
+				</VARIABLE-NAME>
+			</VARIABLE-REFS>
+			<LOOP-COUNT xsi:type="functionBaseExpression">
+				<COMPONENT xsi:type="varBaseExpression">
+					<NAME xsi:type="string">len</NAME>
+				</COMPONENT>
+				<ARGUMENTS>
+					<ARGUMENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="functionBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="attributeBaseExpression">
+										<COMPONENT xsi:type="varBaseExpression">
+											<NAME xsi:type="string">api</NAME>
+										</COMPONENT>
+										<ATTR-NAME xsi:type="string">DataBrowser</ATTR-NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">BrowseBus</ATTR-NAME>
+								</COMPONENT>
+								<ARGUMENTS>
+									<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+										<VALUE xsi:type="string">A-CAN</VALUE>
+									</ARGUMENT>
+								</ARGUMENTS>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">ListFrames</ATTR-NAME>
+						</COMPONENT>
+					</ARGUMENT>
+				</ARGUMENTS>
+			</LOOP-COUNT>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="17485ceb-7887-4851-b380-e76c0316e8bd" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="varBaseExpression">
+				<NAME xsi:type="string">list</NAME>
+			</FORMULA>
+		</TESTSTEP>
+	</TESTSTEPS>
+</PACKAGE>

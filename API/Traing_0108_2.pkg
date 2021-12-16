@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PACKAGE format-rev="7" prog-version="2020.4.105605+9fffb455971e" xmlns="http://www.tracetronic.de/xml/ecu-test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tracetronic.de/xml/ecu-test package.xsd">
+	<INFORMATION format-rev="2" xsi:type="packageInfo">
+		<DESCRIPTION xsi:type="string"/>
+		<VERSION xsi:type="string"/>
+		<ALTERNATE-CALL-REPRESENTATION-ACTION-FIELD-TEMPLATE xsi:type="string"/>
+		<ALTERNATE-CALL-REPRESENTATION-EXPECTATION-FIELD-TEMPLATE xsi:type="string"/>
+	</INFORMATION>
+	<VARIABLES xsi:type="variableContainer">
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">Variable1</NAME>
+			<DESCRIPTION xsi:type="string"/>
+			<DEFAULT-VALUE format-rev="1" xsi:type="value">
+				<DATA xsi:type="integer">1</DATA>
+				<TEXTDATA xsi:type="string">1</TEXTDATA>
+			</DEFAULT-VALUE>
+		</VARIABLE>
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">Varable2</NAME>
+			<DESCRIPTION xsi:type="string"/>
+			<DEFAULT-VALUE format-rev="1" xsi:type="value">
+				<DATA xsi:type="integer">2</DATA>
+				<TEXTDATA xsi:type="string">2</TEXTDATA>
+			</DEFAULT-VALUE>
+		</VARIABLE>
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">result</NAME>
+			<DEFAULT-VALUE xsi:type="undefined"/>
+		</VARIABLE>
+	</VARIABLES>
+	<MAPPING format-rev="1" xsi:type="localMappingSpace"/>
+	<TESTSTEPS xsi:type="testCase">
+		<TESTSTEP format-rev="3" id="885168c1-16da-466c-9337-54bc37b2efff" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="binaryOpBaseExpression">
+				<NAME xsi:type="string">BINARY_ADD</NAME>
+				<FIRST-COMPONENT xsi:type="varBaseExpression">
+					<NAME xsi:type="string">Variable1</NAME>
+				</FIRST-COMPONENT>
+				<SECOND-COMPONENT xsi:type="varBaseExpression">
+					<NAME xsi:type="string">Varable2</NAME>
+				</SECOND-COMPONENT>
+			</FORMULA>
+			<EXPECTATION-OPTION xsi:type="timelessOption">
+				<EXPRESSION xsi:type="builtNumericExpression">
+					<RELATION xsi:type="string">==</RELATION>
+					<VALUE format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="integer">3</VALUE>
+					</VALUE>
+				</EXPRESSION>
+			</EXPECTATION-OPTION>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="3d88716c-995d-4d28-ba79-74720b2b9932" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="functionBaseExpression">
+				<COMPONENT xsi:type="varBaseExpression">
+					<NAME xsi:type="string">max</NAME>
+				</COMPONENT>
+				<ARGUMENTS>
+					<ARGUMENT xsi:type="varBaseExpression">
+						<NAME xsi:type="string">Varable2</NAME>
+					</ARGUMENT>
+					<ARGUMENT xsi:type="varBaseExpression">
+						<NAME xsi:type="string">Variable1</NAME>
+					</ARGUMENT>
+				</ARGUMENTS>
+			</FORMULA>
+			<EXPECTATION-OPTION xsi:type="timelessOption">
+				<EXPRESSION xsi:type="builtNumericExpression">
+					<RELATION xsi:type="string">==</RELATION>
+					<VALUE format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="integer">2</VALUE>
+					</VALUE>
+				</EXPRESSION>
+			</EXPECTATION-OPTION>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="fc831677-45f0-4c9c-ab19-664dc6ffb111" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="functionBaseExpression">
+				<COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="varBaseExpression">
+						<NAME xsi:type="string">api</NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+				</COMPONENT>
+				<ARGUMENTS>
+					<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="string">workspacePath</VALUE>
+					</ARGUMENT>
+				</ARGUMENTS>
+			</FORMULA>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="993b2c2f-987c-4603-992f-4dba06d6b34e" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="functionBaseExpression">
+				<COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="varBaseExpression">
+						<NAME xsi:type="string">api</NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+				</COMPONENT>
+				<ARGUMENTS>
+					<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="string">reportPath</VALUE>
+					</ARGUMENT>
+				</ARGUMENTS>
+			</FORMULA>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="92d74836-20e0-4229-9bd0-a0cc0b8353a2" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="attributeBaseExpression">
+				<COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">AnalysisEnvironment</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">ExecutionInfo</ATTR-NAME>
+				</COMPONENT>
+				<ATTR-NAME xsi:type="string">StartTime</ATTR-NAME>
+			</FORMULA>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="1a1ab14c-b21b-4792-84bf-cad8e3308830" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="attributeBaseExpression">
+				<COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">AnalysisEnvironment</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">ExecutionInfo</ATTR-NAME>
+				</COMPONENT>
+				<ATTR-NAME xsi:type="string">GetWatchTime</ATTR-NAME>
+			</FORMULA>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="495ad016-4f17-499c-a7c3-7c15690950f7" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="functionBaseExpression">
+				<COMPONENT xsi:type="varBaseExpression">
+					<NAME xsi:type="string">len</NAME>
+				</COMPONENT>
+				<ARGUMENTS>
+					<ARGUMENT xsi:type="listOrTupleBaseExpression">
+						<IS-LIST xsi:type="boolean">True</IS-LIST>
+						<EXPRESSION-LIST>
+							<BASE-EXPRESSION format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">1</VALUE>
+							</BASE-EXPRESSION>
+							<BASE-EXPRESSION format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">2</VALUE>
+							</BASE-EXPRESSION>
+							<BASE-EXPRESSION format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">3</VALUE>
+							</BASE-EXPRESSION>
+							<BASE-EXPRESSION format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">4</VALUE>
+							</BASE-EXPRESSION>
+							<BASE-EXPRESSION format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">5</VALUE>
+							</BASE-EXPRESSION>
+						</EXPRESSION-LIST>
+					</ARGUMENT>
+				</ARGUMENTS>
+			</FORMULA>
+			<EXPECTATION-OPTION xsi:type="timelessOption">
+				<EXPRESSION xsi:type="builtNumericExpression">
+					<RELATION xsi:type="string">==</RELATION>
+					<VALUE format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="integer">5</VALUE>
+					</VALUE>
+				</EXPRESSION>
+			</EXPECTATION-OPTION>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="9aa7af30-7e7c-4b13-875f-03caf5b7350b" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="attributeBaseExpression">
+				<COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">TestEnvironment</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">ExecutionInfo</ATTR-NAME>
+				</COMPONENT>
+				<ATTR-NAME xsi:type="string">LastTestStepResult</ATTR-NAME>
+			</FORMULA>
+			<EXPECTATION-OPTION xsi:type="timelessOption">
+				<EXPRESSION xsi:type="builtStringExpression">
+					<CASE-SENSITIVE xsi:type="boolean">False</CASE-SENSITIVE>
+					<BASE-EXPRESSION format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="string">SUCCESS</VALUE>
+					</BASE-EXPRESSION>
+				</EXPRESSION>
+			</EXPECTATION-OPTION>
+		</TESTSTEP>
+		<TESTSTEP id="7a7a9c68-3eae-4d43-9559-a84c52f564e0" name="TsIfThenElse" xsi:type="utility-3609c41e-4fef-11dc-899a-0013728784ee">
+			<CONDITION xsi:type="compareOpBaseExpression">
+				<NAME xsi:type="string">==</NAME>
+				<FIRST-COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">TestEnvironment</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">ExecutionInfo</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">LastTestStepResult</ATTR-NAME>
+				</FIRST-COMPONENT>
+				<SECOND-COMPONENT format-rev="1" xsi:type="valueBaseExpression">
+					<VALUE xsi:type="string">SUCCESS</VALUE>
+				</SECOND-COMPONENT>
+			</CONDITION>
+			<THEN id="423196c3-7896-4fbb-8fca-9096d5c7f9d7" xsi:type="ifThenElseNode">
+				<TESTSTEP format-rev="3" id="9adbbd5e-f35e-4ad2-ae4c-60d0be207aa9" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+					<FORMULA xsi:type="binaryOpBaseExpression">
+						<NAME xsi:type="string">BINARY_ADD</NAME>
+						<FIRST-COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">Varable2</NAME>
+						</FIRST-COMPONENT>
+						<SECOND-COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">Variable1</NAME>
+						</SECOND-COMPONENT>
+					</FORMULA>
+				</TESTSTEP>
+			</THEN>
+			<ELSE id="ff50618a-ad2f-4b5d-afbc-2760f045be5e" xsi:type="ifThenElseNode">
+				<TESTSTEP format-rev="3" id="cea5e0ed-91fb-42a3-b7a4-ba9a1d2fe468" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+					<FORMULA format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="integer">0</VALUE>
+					</FORMULA>
+				</TESTSTEP>
+			</ELSE>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="47ef0a15-77fa-4b78-9b6b-50de2957a812" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="attributeBaseExpression">
+				<COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">TestEnvironment</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">ExecutionInfo</ATTR-NAME>
+				</COMPONENT>
+				<ATTR-NAME xsi:type="string">PackageResult</ATTR-NAME>
+			</FORMULA>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="43563766-26ae-4400-8fc5-9c11fed8a559" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="attributeBaseExpression">
+				<COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">TestEnvironment</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">ExecutionInfo</ATTR-NAME>
+				</COMPONENT>
+				<ATTR-NAME xsi:type="string">ProjectResult</ATTR-NAME>
+			</FORMULA>
+		</TESTSTEP>
+		<TESTSTEP format-rev="2" id="93cccce8-ea21-4472-8357-43b1fb0fb835" xsi:type="tsPackage">
+			<PACKAGE-REFERENCE format-rev="1" xsi:type="valueBaseExpression">
+				<VALUE xsi:type="string">Traing_1227.pkg</VALUE>
+			</PACKAGE-REFERENCE>
+			<PARAM-ASSIGNMENTS/>
+			<ALTERNATIVE-MAPPING-SPACE format-rev="1" xsi:type="mappingSpace"/>
+		</TESTSTEP>
+	</TESTSTEPS>
+	<TRACE-ANALYSES format-rev="1" xsi:type="traceAnalyses">
+		<TRACE-ANALYSIS format-rev="3" uuid="a01730e8517211ebbdf35405db88f931" xsi:type="traceAnalysis">
+			<NAME xsi:type="string">Trace analysis 1</NAME>
+			<ANALYSISITEM format-rev="1" uuid="a01730e9517211eb80ab5405db88f931" xsi:type="episode">
+				<NAME xsi:type="string">New episode</NAME>
+			</ANALYSISITEM>
+			<VIRTUAL-SIGNALS-MANAGER xsi:type="virtualSignalsManager">
+				<VIRTUAL-SIGNALS/>
+			</VIRTUAL-SIGNALS-MANAGER>
+		</TRACE-ANALYSIS>
+	</TRACE-ANALYSES>
+</PACKAGE>

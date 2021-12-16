@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PACKAGE format-rev="7" prog-version="2020.4.105605+9fffb455971e" xmlns="http://www.tracetronic.de/xml/ecu-test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tracetronic.de/xml/ecu-test package.xsd">
+	<INFORMATION format-rev="2" xsi:type="packageInfo">
+		<DESCRIPTION xsi:type="string"/>
+		<VERSION xsi:type="string"/>
+		<ALTERNATE-CALL-REPRESENTATION-ACTION-FIELD-TEMPLATE xsi:type="string"/>
+		<ALTERNATE-CALL-REPRESENTATION-EXPECTATION-FIELD-TEMPLATE xsi:type="string"/>
+	</INFORMATION>
+	<VARIABLES xsi:type="variableContainer">
+		<VARIABLE format-rev="1" in="true" xsi:type="variable">
+			<NAME xsi:type="string">Battery_Control_A0_KW</NAME>
+			<DESCRIPTION xsi:type="string"/>
+			<DEFAULT-VALUE format-rev="1" xsi:type="value">
+				<DATA xsi:type="integer">0</DATA>
+				<TEXTDATA xsi:type="string">0</TEXTDATA>
+			</DEFAULT-VALUE>
+		</VARIABLE>
+		<VARIABLE format-rev="1" in="true" xsi:type="variable">
+			<NAME xsi:type="string">STATUS_VEH_EngineSpeed_In1</NAME>
+			<DESCRIPTION xsi:type="string"/>
+			<DEFAULT-VALUE format-rev="1" xsi:type="value">
+				<DATA xsi:type="integer">0</DATA>
+				<TEXTDATA xsi:type="string">0</TEXTDATA>
+			</DEFAULT-VALUE>
+		</VARIABLE>
+		<VARIABLE format-rev="1" in="true" xsi:type="variable">
+			<NAME xsi:type="string">A</NAME>
+			<DESCRIPTION xsi:type="string"/>
+			<DEFAULT-VALUE format-rev="1" xsi:type="value">
+				<DATA xsi:type="integer">0</DATA>
+				<TEXTDATA xsi:type="string">0</TEXTDATA>
+			</DEFAULT-VALUE>
+		</VARIABLE>
+	</VARIABLES>
+	<MAPPING format-rev="1" xsi:type="localMappingSpace">
+		<MAPPING-ITEM format-rev="2" xsi:type="mappingItem">
+			<ID xsi:type="string">Battery-Control/A0_KW</ID>
+			<XACCESS xsi:type="xaCalibValueVariable">
+				<MAPPING-ENUM xsi:type="vtabInfoEmpty"/>
+				<ECU-KEY xsi:type="string">Battery-Control</ECU-KEY>
+				<LABEL xsi:type="string">A0_KW</LABEL>
+			</XACCESS>
+		</MAPPING-ITEM>
+		<MAPPING-ITEM format-rev="2" xsi:type="mappingItem">
+			<ID xsi:type="string">STATUS_VEH/EngineSpeed [rpm]/In1</ID>
+			<XACCESS format-rev="2" xsi:type="xaModelSignal">
+				<MAPPING-ENUM xsi:type="vtabInfoEmpty"/>
+				<MODEL-KEY xsi:type="string">Plant model</MODEL-KEY>
+				<VARIABLE-PATH xsi:type="string">Model Root/STATUS_VEH/EngineSpeed [rpm]/In1</VARIABLE-PATH>
+				<VARIABLE-TYPE xsi:type="string">flt(64,IEEE)*</VARIABLE-TYPE>
+			</XACCESS>
+		</MAPPING-ITEM>
+	</MAPPING>
+	<TESTSTEPS xsi:type="testCase">
+		<TESTSTEP id="f5f2a6bd-c540-4f50-aaf0-1461971b4b88" name="TsIfDef" xsi:type="utility-f9f253f0-0ad6-11dd-890b-001a6bc47c7f">
+			<TESTSTEP id="22485bfd-93e1-47a5-95c6-f9b69e754e77" xsi:type="tsWrite">
+				<MAPPING-REF xsi:type="string">Battery-Control/A0_KW</MAPPING-REF>
+				<VALUE xsi:type="expressionValue">
+					<DATA format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="float">0.6141483605139144</VALUE>
+					</DATA>
+				</VALUE>
+				<METRIC format-rev="1" xsi:type="metricInfo">
+					<Z-UNIT xsi:type="string">u_none</Z-UNIT>
+					<VALUE-TYPE xsi:type="string">PHYS</VALUE-TYPE>
+					<DATA-TYPE xsi:type="string">VALUE</DATA-TYPE>
+				</METRIC>
+			</TESTSTEP>
+			<TESTSTEP id="7e13e697-c7ab-4b49-8aef-e0c2d28fef72" xsi:type="tsRead">
+				<MAPPING-REF xsi:type="string">Battery-Control/A0_KW</MAPPING-REF>
+				<VARIABLE-REFS>
+					<VARIABLE-NAME dkey="default">
+						<DVALUE xsi:type="string">Battery_Control_A0_KW</DVALUE>
+					</VARIABLE-NAME>
+				</VARIABLE-REFS>
+				<EXPECTATION xsi:type="finallyTrueOption">
+					<EXPRESSION xsi:type="builtNumericExpression">
+						<RELATION xsi:type="string">==</RELATION>
+						<VALUE format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="float">0.3398529227408691</VALUE>
+						</VALUE>
+					</EXPRESSION>
+					<TIME format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="integer">500</VALUE>
+					</TIME>
+				</EXPECTATION>
+				<METRIC format-rev="1" xsi:type="metricInfo">
+					<Z-UNIT xsi:type="string">u_none</Z-UNIT>
+					<VALUE-TYPE xsi:type="string">PHYS</VALUE-TYPE>
+					<DATA-TYPE xsi:type="string">VALUE</DATA-TYPE>
+				</METRIC>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="a237e32f-bef3-4d4e-b827-746cdae7d0f0" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<VARIABLE-REFS>
+					<VARIABLE-NAME dkey="default">
+						<DVALUE xsi:type="string">A</DVALUE>
+					</VARIABLE-NAME>
+				</VARIABLE-REFS>
+				<FORMULA xsi:type="binaryOpBaseExpression">
+					<NAME xsi:type="string">BINARY_MULTIPLY</NAME>
+					<FIRST-COMPONENT xsi:type="varBaseExpression">
+						<NAME xsi:type="string">STATUS_VEH_EngineSpeed_In1</NAME>
+					</FIRST-COMPONENT>
+					<SECOND-COMPONENT format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="integer">100</VALUE>
+					</SECOND-COMPONENT>
+				</FORMULA>
+			</TESTSTEP>
+			<CONDITION xsi:type="compareOpBaseExpression">
+				<NAME xsi:type="string">==</NAME>
+				<FIRST-COMPONENT xsi:type="varBaseExpression">
+					<NAME xsi:type="string">A</NAME>
+				</FIRST-COMPONENT>
+				<SECOND-COMPONENT format-rev="1" xsi:type="valueBaseExpression">
+					<VALUE xsi:type="integer">2</VALUE>
+				</SECOND-COMPONENT>
+			</CONDITION>
+		</TESTSTEP>
+		<TESTSTEP id="092f6906-78db-42fb-98a3-fd625e4d124e" name="TsIfDef" xsi:type="utility-f9f253f0-0ad6-11dd-890b-001a6bc47c7f">
+			<ENABLED xsi:type="boolean">False</ENABLED>
+			<TESTSTEP id="9b0e8186-b632-423a-a024-963ecf228b1a" xsi:type="tsRead">
+				<MAPPING-REF xsi:type="string">STATUS_VEH/EngineSpeed [rpm]/In1</MAPPING-REF>
+				<VARIABLE-REFS>
+					<VARIABLE-NAME dkey="default">
+						<DVALUE xsi:type="string">STATUS_VEH_EngineSpeed_In1</DVALUE>
+					</VARIABLE-NAME>
+				</VARIABLE-REFS>
+				<EXPECTATION xsi:type="timelessOption">
+					<EXPRESSION xsi:type="builtNumericExpression">
+						<RELATION xsi:type="string">==</RELATION>
+						<VALUE format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="float">66.95537134982466</VALUE>
+						</VALUE>
+					</EXPRESSION>
+				</EXPECTATION>
+				<METRIC format-rev="1" xsi:type="metricInfo">
+					<VALUE-TYPE xsi:type="string">PHYS</VALUE-TYPE>
+					<DATA-TYPE xsi:type="string">VALUE</DATA-TYPE>
+				</METRIC>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="8a8adebb-2525-46f5-afdc-36aa2642ce13" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GlobalConstants</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">version</ATTR-NAME>
+				</FORMULA>
+				<EXPECTATION-OPTION xsi:type="timelessOption">
+					<EXPRESSION xsi:type="builtNumericExpression">
+						<RELATION xsi:type="string">==</RELATION>
+						<VALUE format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">1</VALUE>
+						</VALUE>
+					</EXPRESSION>
+				</EXPECTATION-OPTION>
+			</TESTSTEP>
+			<CONDITION xsi:type="compareOpBaseExpression">
+				<NAME xsi:type="string">==</NAME>
+				<FIRST-COMPONENT xsi:type="varBaseExpression">
+					<NAME xsi:type="string">version</NAME>
+				</FIRST-COMPONENT>
+				<SECOND-COMPONENT format-rev="1" xsi:type="valueBaseExpression">
+					<VALUE xsi:type="integer">2</VALUE>
+				</SECOND-COMPONENT>
+			</CONDITION>
+		</TESTSTEP>
+	</TESTSTEPS>
+</PACKAGE>

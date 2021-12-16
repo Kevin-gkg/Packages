@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PROJECT format-rev="10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<NAME xsi:type="string">Project</NAME>
+	<ENABLED xsi:type="boolean">True</ENABLED>
+	<REPORTING xsi:type="boolean">True</REPORTING>
+	<ID xsi:type="string">fe2f27b8557b11eb82d95405db88f931</ID>
+	<COMPONENTS>
+		<COMPONENT format-rev="5" xsi:type="packageTest">
+			<NAME xsi:type="string">Training_0113</NAME>
+			<ENABLED xsi:type="boolean">True</ENABLED>
+			<REPORTING xsi:type="boolean">True</REPORTING>
+			<ID xsi:type="string">65a760b4557c11eb9b595405db88f931</ID>
+			<COMPONENTS>
+				<COMPONENT format-rev="3" xsi:type="paramRecord">
+					<NAME xsi:type="string">New parameter set</NAME>
+					<ENABLED xsi:type="boolean">True</ENABLED>
+					<REPORTING xsi:type="boolean">True</REPORTING>
+					<ID xsi:type="string">8b5a20c8557c11ebbf8e5405db88f931</ID>
+					<PARAMETER-DATA xsi:type="packageParameterData">
+						<PARAMETER xsi:type="parameterEntry">
+							<NAME xsi:type="string">A</NAME>
+							<VALUE format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">2</VALUE>
+							</VALUE>
+						</PARAMETER>
+						<PARAMETER xsi:type="parameterEntry">
+							<NAME xsi:type="string">Battery_Control_A0_KW</NAME>
+							<VALUE format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">2</VALUE>
+							</VALUE>
+						</PARAMETER>
+						<PARAMETER xsi:type="parameterEntry">
+							<NAME xsi:type="string">STATUS_VEH_EngineSpeed_In1</NAME>
+							<VALUE format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">1</VALUE>
+							</VALUE>
+						</PARAMETER>
+					</PARAMETER-DATA>
+					<TM-INFO format-rev="1" xsi:type="testManagementInfo"/>
+				</COMPONENT>
+				<COMPONENT format-rev="1" xsi:type="variationSet">
+					<NAME xsi:type="string">Parameter variation</NAME>
+					<ENABLED xsi:type="boolean">True</ENABLED>
+					<REPORTING xsi:type="boolean">True</REPORTING>
+					<ID xsi:type="string">9c17e74a557c11eb94355405db88f931</ID>
+					<COMPONENTS/>
+					<PARAM-GENERATOR xsi:type="paramGenerator-d94fc3b6-7764-4692-9883-a838a9aae009">
+						<VERSION xsi:type="integer">2</VERSION>
+						<LIMIT-SETTINGS xsi:type="limitSettings">
+							<LIMIT xsi:type="integer">15000</LIMIT>
+						</LIMIT-SETTINGS>
+						<DATA-STORE xsi:type="parameterDataStore">
+							<PARAMETERS>
+								<ELEMENT dkey="A">
+									<DVALUE xsi:type="list">
+										<ELEMENT xsi:type="string">1,3,5</ELEMENT>
+										<ELEMENT xsi:type="string">Numeric</ELEMENT>
+									</DVALUE>
+								</ELEMENT>
+								<ELEMENT dkey="Battery_Control_A0_KW">
+									<DVALUE xsi:type="list">
+										<ELEMENT xsi:type="string">2.1</ELEMENT>
+										<ELEMENT xsi:type="string">Numeric</ELEMENT>
+									</DVALUE>
+								</ELEMENT>
+								<ELEMENT dkey="STATUS_VEH_EngineSpeed_In1">
+									<DVALUE xsi:type="list">
+										<ELEMENT xsi:type="string">1</ELEMENT>
+										<ELEMENT xsi:type="string">Numeric</ELEMENT>
+									</DVALUE>
+								</ELEMENT>
+							</PARAMETERS>
+							<ALGORITHM xsi:type="integer">0</ALGORITHM>
+							<N-WISE-FACTOR xsi:type="integer">2</N-WISE-FACTOR>
+							<LIMIT-SETTINGS xsi:type="limitSettings">
+								<LIMIT xsi:type="integer">15000</LIMIT>
+							</LIMIT-SETTINGS>
+						</DATA-STORE>
+					</PARAM-GENERATOR>
+				</COMPONENT>
+			</COMPONENTS>
+			<PACKAGE-REF format-rev="1" xsi:type="packageRef">
+				<PACKAGE-PATH xsi:type="string">Training_0113.pkg</PACKAGE-PATH>
+			</PACKAGE-REF>
+		</COMPONENT>
+	</COMPONENTS>
+</PROJECT>

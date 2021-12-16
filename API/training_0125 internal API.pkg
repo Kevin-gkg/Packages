@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PACKAGE format-rev="7" prog-version="2020.4.105605+9fffb455971e" xmlns="http://www.tracetronic.de/xml/ecu-test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tracetronic.de/xml/ecu-test package.xsd">
+	<INFORMATION format-rev="2" xsi:type="packageInfo">
+		<DESCRIPTION xsi:type="string"/>
+		<VERSION xsi:type="string"/>
+		<ALTERNATE-CALL-REPRESENTATION-ACTION-FIELD-TEMPLATE xsi:type="string"/>
+		<ALTERNATE-CALL-REPRESENTATION-EXPECTATION-FIELD-TEMPLATE xsi:type="string"/>
+	</INFORMATION>
+	<VARIABLES xsi:type="variableContainer">
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">Toollist</NAME>
+			<DEFAULT-VALUE xsi:type="undefined"/>
+		</VARIABLE>
+		<VARIABLE format-rev="1" xsi:type="variable">
+			<NAME xsi:type="string">Model_Item</NAME>
+			<DEFAULT-VALUE xsi:type="undefined"/>
+		</VARIABLE>
+	</VARIABLES>
+	<MAPPING format-rev="1" xsi:type="localMappingSpace"/>
+	<TESTSTEPS xsi:type="testCase">
+		<TESTSTEP format-rev="3" id="c1d677eb-44d4-47e1-be59-6bd7264edce6" name="TsBlock" xsi:type="utility-2752ad1e-4fef-11dc-81d4-0013728784ee">
+			<ACTION xsi:type="I18NItem">
+				<MULTILANGDATA>
+					<ELEMENT dkey="en_US">
+						<DVALUE xsi:type="string">Global Constans</DVALUE>
+					</ELEMENT>
+				</MULTILANGDATA>
+				<INITIAL-LANGUAGE xsi:type="string">en_US</INITIAL-LANGUAGE>
+			</ACTION>
+			<TESTSTEP format-rev="3" id="acbfa6e0-e0c6-4ddc-b10c-d603b6657641" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GlobalConstants</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">A</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="abc02b59-ae91-4a55-8be8-711154bbfbf8" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">GlobalConstants</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetConstant</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">D</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="5e5f31a5-30f6-4110-8bb6-2c827e33d561" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">GlobalConstants</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetConstants</ATTR-NAME>
+					</COMPONENT>
+				</FORMULA>
+			</TESTSTEP>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="37743762-c531-422e-975e-f257977816b8" name="TsBlock" xsi:type="utility-2752ad1e-4fef-11dc-81d4-0013728784ee">
+			<ACTION xsi:type="I18NItem">
+				<MULTILANGDATA>
+					<ELEMENT dkey="en_US">
+						<DVALUE xsi:type="string">Math</DVALUE>
+					</ELEMENT>
+				</MULTILANGDATA>
+				<INITIAL-LANGUAGE xsi:type="string">en_US</INITIAL-LANGUAGE>
+			</ACTION>
+			<TESTSTEP format-rev="3" id="9a1e5e79-3188-4eda-b729-2607ea3e80e8" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Math</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">RandomValue</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">20</VALUE>
+						</ARGUMENT>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">3</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="83c8dd13-e30a-4bf6-8a86-83ec09e0c20b" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Math</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">RandomValue</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">30</VALUE>
+						</ARGUMENT>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">3</VALUE>
+						</ARGUMENT>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">2</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="99fd5bbd-6b62-4b72-b004-c303b50ede7b" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Math</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">RandomValueMinMax</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">20</VALUE>
+						</ARGUMENT>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">22</VALUE>
+						</ARGUMENT>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">1</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+					<KEYWORD-ARGUMENTS>
+						<KEYWORD-ARGUMENT xsi:type="kwargBaseExpression">
+							<KEY format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="string">includeMaxValue</VALUE>
+							</KEY>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="boolean">True</VALUE>
+							</ARGUMENT>
+						</KEYWORD-ARGUMENT>
+					</KEYWORD-ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="6cf8c004-f787-49a3-992e-00beaa743b6e" name="TsBlock" xsi:type="utility-2752ad1e-4fef-11dc-81d4-0013728784ee">
+			<ACTION xsi:type="I18NItem">
+				<MULTILANGDATA>
+					<ELEMENT dkey="en_US">
+						<DVALUE xsi:type="string">Test Bench Configuration</DVALUE>
+					</ELEMENT>
+				</MULTILANGDATA>
+				<INITIAL-LANGUAGE xsi:type="string">en_US</INITIAL-LANGUAGE>
+			</ACTION>
+			<TESTSTEP format-rev="3" id="b33370bb-a6f5-4379-9e04-b53c730dab5b" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">CurrentTestbenchConfiguration</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Filename</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="e4f7ec30-b23b-45ba-9610-bbfcfec4b1e4" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">CurrentTestbenchConfiguration</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">ToolList</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="41138e63-8a3d-42a4-8cd6-14bac70c3682" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="varBaseExpression">
+									<NAME xsi:type="string">api</NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">CurrentTestbenchConfiguration</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Tools</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="integer">0</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="aa8e0afc-ae77-4246-9b90-ae210a2a09dc" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestbenchConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">Tools</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">0</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Name</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="7b9997df-d510-4be6-b2d2-775e993380e1" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">CurrentTestbenchConfiguration</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetToolhostInfo</ATTR-NAME>
+					</COMPONENT>
+				</FORMULA>
+			</TESTSTEP>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="eb92e0c0-d989-4ffc-8104-df599f2f2981" name="TsBlock" xsi:type="utility-2752ad1e-4fef-11dc-81d4-0013728784ee">
+			<ACTION xsi:type="I18NItem">
+				<MULTILANGDATA>
+					<ELEMENT dkey="en_US">
+						<DVALUE xsi:type="string">Test Configuration</DVALUE>
+					</ELEMENT>
+				</MULTILANGDATA>
+				<INITIAL-LANGUAGE xsi:type="string">en_US</INITIAL-LANGUAGE>
+			</ACTION>
+			<TESTSTEP format-rev="3" id="0e62cad9-b14e-41e5-9353-4790ba2145ee" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Filename</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="9f0fb886-ee27-4592-9eac-021c21e352b1" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">NameTester</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="269b4537-9239-4f14-8dec-a70f6a7029fa" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">BusSystems</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">0</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Database</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="6eabe109-d0fc-40fa-91bb-a52eb353a217" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">BusSystems</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">1</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Name</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="9a35bed2-f407-42a6-82c6-c9ebdcecc3df" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">BusSystems</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">1</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Channel</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="d2ec8728-f142-4c8e-adca-8a836d53d920" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">Ecus</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Count</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="e26d6be9-81f2-4a60-a1f3-f30dfea7e950" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">Models</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Count</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="2aa2a3dd-c66c-41c3-9b7d-a52e24a531f8" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">Models</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">0</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Name</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="487a236c-c3c7-43fd-ab2d-75f2ea6234c7" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">EnvironmentSimulations</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Count</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="e110a8ad-b0f2-4f14-ac3b-16791eb4845d" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">EnvironmentSimulations</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">0</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Name</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="7b57f8cf-5503-4dd4-808c-934901a8a622" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="varBaseExpression">
+								<NAME xsi:type="string">api</NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GlobalConstants</ATTR-NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Count</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="5f76416a-03cc-4de5-9c9c-65e19e0e33e4" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">GlobalConstants</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">2</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Name</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="e039ac9e-33d8-42fe-a518-0b79c1cd4dd4" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">GlobalConstants</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">2</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Description</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="56d4730f-03eb-41e5-9143-e9aa0ba2b692" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="functionBaseExpression">
+						<COMPONENT xsi:type="attributeBaseExpression">
+							<COMPONENT xsi:type="attributeBaseExpression">
+								<COMPONENT xsi:type="attributeBaseExpression">
+									<COMPONENT xsi:type="varBaseExpression">
+										<NAME xsi:type="string">api</NAME>
+									</COMPONENT>
+									<ATTR-NAME xsi:type="string">CurrentTestConfiguration</ATTR-NAME>
+								</COMPONENT>
+								<ATTR-NAME xsi:type="string">GlobalConstants</ATTR-NAME>
+							</COMPONENT>
+							<ATTR-NAME xsi:type="string">Item</ATTR-NAME>
+						</COMPONENT>
+						<ARGUMENTS>
+							<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+								<VALUE xsi:type="integer">1</VALUE>
+							</ARGUMENT>
+						</ARGUMENTS>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">Value</ATTR-NAME>
+				</FORMULA>
+			</TESTSTEP>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="c1c8b2ff-a3d9-45da-9980-b1726933c11c" name="TsBlock" xsi:type="utility-2752ad1e-4fef-11dc-81d4-0013728784ee">
+			<ACTION xsi:type="I18NItem">
+				<MULTILANGDATA>
+					<ELEMENT dkey="en_US">
+						<DVALUE xsi:type="string">Get Setting</DVALUE>
+					</ELEMENT>
+				</MULTILANGDATA>
+				<INITIAL-LANGUAGE xsi:type="string">en_US</INITIAL-LANGUAGE>
+			</ACTION>
+			<TESTSTEP format-rev="3" id="91732673-b549-4d06-88a7-95a39414a9a7" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">workspacePath</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="96a8acc9-19fa-4b1f-8c4a-f8e3f9c1b71b" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">reportPath</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="4eec2999-4687-4bd9-a454-2b238f652567" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">traceStepPath</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="945682f2-e4c9-49e1-9b27-e1fceeab684e" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">generatorPath</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="354d4add-e32c-4192-9733-e22598afb3a8" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">errorLogFile</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="646aefb9-7242-44cc-99f5-894ee02f0ea7" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">logFile</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="3fc3a7da-05cd-41ce-b9f1-b1025a14f7d1" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">language</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+			<TESTSTEP format-rev="3" id="2144485d-fce3-4d0c-a85a-95a9ed35dc55" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+				<FORMULA xsi:type="functionBaseExpression">
+					<COMPONENT xsi:type="attributeBaseExpression">
+						<COMPONENT xsi:type="varBaseExpression">
+							<NAME xsi:type="string">api</NAME>
+						</COMPONENT>
+						<ATTR-NAME xsi:type="string">GetSetting</ATTR-NAME>
+					</COMPONENT>
+					<ARGUMENTS>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">settingsPath</VALUE>
+						</ARGUMENT>
+					</ARGUMENTS>
+				</FORMULA>
+			</TESTSTEP>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="4938b71d-eda6-4ba1-a13f-908e1ccdd438" name="TsCalculation" xsi:type="utility-4115fa00-5f3c-11df-8a53-001c233b3528">
+			<FORMULA xsi:type="functionBaseExpression">
+				<COMPONENT xsi:type="attributeBaseExpression">
+					<COMPONENT xsi:type="varBaseExpression">
+						<NAME xsi:type="string">api</NAME>
+					</COMPONENT>
+					<ATTR-NAME xsi:type="string">GeneratePackageDocumentation</ATTR-NAME>
+				</COMPONENT>
+				<ARGUMENTS>
+					<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="string">C:\\ECU TEST Workspace . ECU-TEST_Tools\\Packages\training_0125 internal API.pkg</VALUE>
+					</ARGUMENT>
+					<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+						<VALUE xsi:type="string">C:\\ECU TEST Workspace . ECU-TEST_Tools\\Packages\\Exercise0125</VALUE>
+					</ARGUMENT>
+				</ARGUMENTS>
+				<KEYWORD-ARGUMENTS>
+					<KEYWORD-ARGUMENT xsi:type="kwargBaseExpression">
+						<KEY format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="string">doasync</VALUE>
+						</KEY>
+						<ARGUMENT format-rev="1" xsi:type="valueBaseExpression">
+							<VALUE xsi:type="boolean">False</VALUE>
+						</ARGUMENT>
+					</KEYWORD-ARGUMENT>
+				</KEYWORD-ARGUMENTS>
+			</FORMULA>
+		</TESTSTEP>
+	</TESTSTEPS>
+</PACKAGE>
