@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PACKAGE format-rev="7" prog-version="2020.4.105605+9fffb455971e" xmlns="http://www.tracetronic.de/xml/ecu-test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tracetronic.de/xml/ecu-test package.xsd">
+<PACKAGE format-rev="7" prog-version="2021.4.119000+a29e29641862" xmlns="http://www.tracetronic.de/xml/ecu-test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tracetronic.de/xml/ecu-test package.xsd">
 	<INFORMATION format-rev="2" xsi:type="packageInfo">
 		<DESCRIPTION xsi:type="string"/>
 		<VERSION xsi:type="string"/>
@@ -129,6 +129,16 @@
 				<VALUE-TYPE xsi:type="string">PHYS</VALUE-TYPE>
 				<DATA-TYPE xsi:type="string">VALUE</DATA-TYPE>
 			</METRIC>
+		</TESTSTEP>
+		<TESTSTEP format-rev="3" id="203f0483-e4dd-4fcd-8bf8-3460f51c3b4b" name="TsBlock" xsi:type="utility-2752ad1e-4fef-11dc-81d4-0013728784ee">
+			<ACTION xsi:type="I18NItem">
+				<MULTILANGDATA>
+					<ELEMENT dkey="en_US">
+						<DVALUE xsi:type="string">New block</DVALUE>
+					</ELEMENT>
+				</MULTILANGDATA>
+				<INITIAL-LANGUAGE xsi:type="string">en_US</INITIAL-LANGUAGE>
+			</ACTION>
 		</TESTSTEP>
 	</TESTSTEPS>
 </PACKAGE>
